@@ -9,8 +9,9 @@ const PostsList = () => {
     return (
         <div>
             <div>
-                {posts}
-                console.log(post)
+                {posts.map(post =>
+                    <PostCard key={post.id} post={post} />
+                )}
             </div>
         </div>
     )
