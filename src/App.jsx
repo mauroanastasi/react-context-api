@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PostsContext from '../contexts/Postscontext';
 
 function App() {
   const posts = [
@@ -8,9 +9,13 @@ function App() {
     { id: 4, title: 'Build fast, responsive sites with Bootstrap', content: 'Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.', category: 'Frontend' },
   ];
 
+
+
   return (
     <>
-      <h1>ciao</h1>
+      <PostsContext.Provider value={{ posts }}>
+        <h1>ciao</h1>
+      </PostsContext.Provider>
     </>
   )
 }
