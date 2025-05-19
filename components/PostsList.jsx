@@ -1,8 +1,18 @@
 import React from 'react'
+import { useContext } from 'react'
+import PostsContext from '../contexts/Postscontext'
 
 const PostsList = () => {
+
+    let { posts } = useContext(PostsContext);
+
     return (
-        <div></div>
+        <div>
+            <div>
+                {posts}
+                console.log(post)
+            </div>
+        </div>
     )
 }
 
