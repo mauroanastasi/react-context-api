@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import PostsContext from '../contexts/Postscontext';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import PostsPage from '../components/PostsPage';
 
 function App() {
   const posts = [
@@ -14,7 +16,11 @@ function App() {
   return (
     <>
       <PostsContext.Provider value={{ posts }}>
-        <h1>ciao</h1>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" Component={PostsPage} />
+          </Routes>
+        </BrowserRouter>
       </PostsContext.Provider>
     </>
   )
